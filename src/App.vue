@@ -44,26 +44,10 @@ import Help from "./lib/help.vue";
 import Workspace from "./lib/workspace.vue";
 </script>
 <script>
-// import gfm from "@bytemd/plugin-gfm";
-// import highlight from "@bytemd/plugin-highlight-ssr";
-// import breaks from "@bytemd/plugin-breaks";
-// import gemoji from "@bytemd/plugin-gemoji";
-// import mermaid from "@bytemd/plugin-mermaid";
-// import math from "@bytemd/plugin-math-ssr";
-// import { Editor, Viewer } from "@bytemd/vue-next";
-// import "bytemd/dist/index.css";
-// import "highlight.js/styles/default.css"; // 代码高亮主题
-// import "katex/dist/katex.css";
-// import zh_Hans from "bytemd/locales/zh_Hans.json";
+
 import { Util } from "./util.ts";
 
-// const plugins = [gfm(), highlight(), breaks(), gemoji(), math(), mermaid()];
-// const editorConfig = {
-//   lineNumbers: true,
-// };
-
 export default {
-  //components: { Editor },
   setup() {
     console.log("setup");
   },
@@ -73,12 +57,6 @@ export default {
         fileMenu: false,
         helpMenu: false,
       },
-      value: "",
-      //plugins,
-      //editorConfig,
-     // locale: zh_Hans,
-      placeholder:
-        "这是一个基于bytemd(https://bytemd.js.org/#usage)的Markdown编辑器,感谢bytemd的开发者！",
       icon: {
         size: "sm",
         color: "black",
