@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tauri + Vue + Typescript App</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Tauri 窗口默认填满，但为保证布局明确，设置 100vh */
+    }
+
+    .editor-container {
+      flex: 1;
+      min-height: 0;
+    }
+
+    .editor-container .bytemd {
+      height: calc(100vh - 41px) !important;
+    }
+
+    /*====== Toolbar ======*/
+    .toolbar {
+      display: flex;
+      background: #f0f0f0;
+      padding: 4px 8px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu {
+      position: relative;
+      margin-right: 16px;
+      cursor: pointer;
+    }
+
+    .menu span {
+      padding: 4px 8px;
+      /* display: inline-block; */
+    }
+
+    .menu span:hover {
+      background: #e0e0e0;
+    }
+
+    .menu-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      min-width: 120px;
+      z-index: 1000;
+    }
+
+    .menu-dropdown div {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    .menu-dropdown div:hover {
+      background: #f0f0f0;
+    }
+
+    .menu-icon{
+      display: inline-flex; 
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
