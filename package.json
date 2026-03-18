@@ -25,8 +25,8 @@
     "highlight.js": "^11.7.0",
     "vue": "^3.5.13",
     "github-markdown-css": "^5.9.0",
-    "@boxicons/vue": "^1.0.1",
-    "element-plus": "^2.13.5"
+    "element-plus": "^2.13.5",
+    "@element-plus/icons-vue": "^2.3.2"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",

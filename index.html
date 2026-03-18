@@ -13,6 +13,7 @@
       padding: 0;
       height: 100%;
       width: 100%;
+      overflow: hidden;
     }
 
     .app {
@@ -25,10 +26,6 @@
     .editor-container {
       flex: 1;
       min-height: 0;
-    }
-
-    .editor-container .bytemd {
-      height: calc(100vh - 41px) !important;
     }
 
     /*====== Toolbar ======*/
@@ -73,9 +70,79 @@
       background: #f0f0f0;
     }
 
-    .menu-icon{
-      display: inline-flex; 
+    .menu-icon {
+      display: inline-flex;
       align-items: center;
+    }
+
+    /*====== Explorer Style ======*/
+    .explorer {
+      height: calc(100vh - 41px);
+    }
+
+    .explorer .panel {
+      padding: 0px !important;
+    }
+
+    .explorer .header {
+      height: 34px !important;
+    }
+
+    .explorer .header .title {
+      display: flex;
+      background: #f0f0f0;
+      padding: 6px 8px 7px 8px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .explorer .folder {
+      height: 100%;
+    }
+
+    .explorer .footer {
+      height: 26px !important;
+    }
+
+    .explorer .footer .title {
+      font-size: 12px;
+      line-height: 24px;
+      border-top: 1px solid #e1e4e8;
+      user-select: none;
+    }
+
+    .title {
+      font-size: 14px;
+    }
+
+    /*====== Editor Style ======*/
+    .editor {
+      height: calc(100vh - 41px);
+    }
+
+    .editor .main,
+    .editor .tabs,
+    .editor .el-tab-pane {
+      height: 100%;
+    }
+
+    .editor .el-main {
+      padding: 0;
+    }
+
+    .editor .tabs .el-tabs__header {
+      margin: 0;
+    }
+
+    .editor .tabs .bytemd {
+      height: 100% !important;
+    }
+
+    .editor .el-header,
+    .editor .el-footer {
+      height: 0px;
+    }
+    .el-tab-pane > div {
+      height: 100%;
     }
   </style>
 </head>

@@ -7,7 +7,9 @@
           @click="openMenu('fileMenu')"
           @mouseover="openMenu('fileMenu')"
         >
-          <File :size="icon.size" :color="icon.color" />文件
+          <el-icon :size="icon.size" :color="icon.color">
+              <Document />
+          </el-icon>文件
         </span>
         <div v-show="showMeuns.fileMenu" class="menu-dropdown">
           <div @click="newFile">新建</div>
@@ -22,7 +24,7 @@
           @click="openMenu('helpMenu')"
           @mouseover="openMenu('helpMenu')"
         >
-          <HelpCircle :size="icon.size" :color="icon.color" />帮助
+          <el-icon :size="icon.size" :color="icon.color"><QuestionFilled /></el-icon>帮助
         </span>
         <div v-show="showMeuns.helpMenu" class="menu-dropdown">
           <div @click="showAbout">关于</div>
@@ -31,14 +33,13 @@
       </div>
     </div>
     <div class="editor-container">
-      <Workspace />
+      <Workspace ref="workspaceView" />
     </div>
   </div>
   <About ref="aboutDialog" />
   <Help ref="helpDialog" />
 </template>
 <script setup>
-import { File, Menu, Home, HelpCircle } from "@boxicons/vue";
 import About from "./lib/about.vue";
 import Help from "./lib/help.vue";
 import Workspace from "./lib/workspace.vue";
@@ -58,8 +59,8 @@ export default {
         helpMenu: false,
       },
       icon: {
-        size: "sm",
-        color: "black",
+        size: 20,
+        color: "blue",
       },
     };
   },
@@ -90,11 +91,16 @@ export default {
     openMenu(key) {
       this._showMenus(key);
     },
+    invokeMenuClickEvent(command) {
+      command();
+      this._hideMenus();
+    },
     newFile() {
       console.log("newFile");
     },
     openFile() {
       console.log("openFile");
+      this.invokeMenuClickEvent(() => this.$refs.workspaceView.openFile());
     },
     saveFile() {
       console.log("saveFile");
@@ -103,10 +109,13 @@ export default {
       console.log("saveAsFile");
     },
     showAbout() {
-      this.$refs.aboutDialog.showDialog();
+      // this.$refs.aboutDialog.showDialog();
+      // this._hideMenus();
+      this.invokeMenuClickEvent(() => this.$refs.aboutDialog.showDialog());
     },
     openDocs() {
       this.$refs.helpDialog.showDialog();
+      this._hideMenus();
     },
   },
   mounted() {
