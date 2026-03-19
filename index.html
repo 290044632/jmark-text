@@ -23,10 +23,32 @@
       /* Tauri 窗口默认填满，但为保证布局明确，设置 100vh */
     }
 
-    .editor-container {
+    .app .el-header {
+      padding: 0;
+      height: auto;
+    }
+
+    .app .el-main {
+      padding: 0;
+    }
+
+    /* .editor-container {
       flex: 1;
       min-height: 0;
+    } */
+
+    .app .footer {
+      padding: 0;
+      height: 26px !important;
     }
+
+    .app .footer>.title {
+      font-size: 12px;
+      line-height: 24px;
+      border-top: 1px solid #e1e4e8;
+      user-select: none;
+    }
+
 
     /*====== Toolbar ======*/
     .toolbar {
@@ -76,8 +98,11 @@
     }
 
     /*====== Explorer Style ======*/
+    .title {
+      font-size: 14px;
+    }
     .explorer {
-      height: calc(100vh - 41px);
+      height: calc(100vh - 80px);
     }
 
     .explorer .panel {
@@ -99,24 +124,9 @@
       height: 100%;
     }
 
-    .explorer .footer {
-      height: 26px !important;
-    }
-
-    .explorer .footer .title {
-      font-size: 12px;
-      line-height: 24px;
-      border-top: 1px solid #e1e4e8;
-      user-select: none;
-    }
-
-    .title {
-      font-size: 14px;
-    }
-
     /*====== Editor Style ======*/
     .editor {
-      height: calc(100vh - 41px);
+      height: calc(100vh - 67px);
     }
 
     .editor .main,
@@ -141,7 +151,12 @@
     .editor .el-footer {
       height: 0px;
     }
-    .el-tab-pane > div {
+
+    .el-tab-pane>div {
+      height: 100%;
+    }
+
+    .editor .bytemd-body {
       height: 100%;
     }
   </style>

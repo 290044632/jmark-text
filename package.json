@@ -17,20 +17,20 @@
     "@bytemd/plugin-highlight-ssr": "^1.22.0",
     "@bytemd/plugin-math": "^1.22.0",
     "@bytemd/plugin-math-ssr": "^1.22.0",
-    "@bytemd/plugin-mermaid": "^1.22.0",
-    "@bytemd/vue-next": "^1.22.0",
+    "@bytemd/plugin-mermaid": "file:.yalc/@bytemd/plugin-mermaid",
+    "@bytemd/vue-next": "file:.yalc/@bytemd/vue-next",
+    "@element-plus/icons-vue": "^2.3.2",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
-    "bytemd": "^1.22.0",
-    "highlight.js": "^11.7.0",
-    "vue": "^3.5.13",
-    "github-markdown-css": "^5.9.0",
     "element-plus": "^2.13.5",
-    "@element-plus/icons-vue": "^2.3.2"
+    "github-markdown-css": "^5.9.0",
+    "highlight.js": "^11.7.0",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2",
     "@vitejs/plugin-vue": "^5.2.1",
+    "bytemd": "file:.yalc/bytemd",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
     "vue-tsc": "^2.1.10"

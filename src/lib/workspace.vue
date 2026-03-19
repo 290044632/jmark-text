@@ -13,9 +13,6 @@
         <el-main class="panel folder">
           <FolderView ref="folderView" />
         </el-main>
-        <el-footer class="panel footer">
-          <div class="title">JMarkText Editor Version 1.0.0</div>
-        </el-footer>
       </el-container>
     </el-splitter-panel>
     <el-splitter-panel :min="200">

@@ -33,6 +33,8 @@
             mode="split"
             @change="handleChange"
             :placeholder="item.placeholder"
+            :showToolbar="config.showToolbar"
+            :showStatus="config.showStatus"
           />
         </el-tab-pane>
       </el-tabs>
@@ -53,8 +55,9 @@ import math from "@bytemd/plugin-math-ssr";
 import { Editor } from "@bytemd/vue-next";
 import "bytemd/dist/index.css";
 import "highlight.js/styles/default.css";
-import "katex/dist/katex.css";
+// import "katex/dist/katex.css";
 import zh_Hans from "bytemd/locales/zh_Hans.json";
+
 
 let tabIndex = 1;
 const editableTabsValue = ref("1");
@@ -108,6 +111,8 @@ const props = defineProps({
       plugins: [gfm(), highlight(), breaks(), gemoji(), math(), mermaid()],
       editorConfig: { lineNumbers: true },
       locale: zh_Hans,
+      showToolbar: false,
+      showStatus: false,
       //   placeholder:
       // "这是一个基于bytemd(https://bytemd.js.org/#usage)的Markdown编辑器,感谢bytemd的开发者！",
     }),

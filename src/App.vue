@@ -1,5 +1,7 @@
 <template>
   <div class="app">
+  <el-container>
+  <el-header>
     <div class="toolbar">
       <div class="menu">
         <span
@@ -32,9 +34,17 @@
         </div>
       </div>
     </div>
-    <div class="editor-container">
+    </el-header>
+    <el-main>
+    <!-- <div class="editor-container">
       <Workspace ref="workspaceView" />
-    </div>
+    </div> -->
+     <Workspace ref="workspaceView" />
+    </el-main>
+    <el-footer class="panel footer">
+        <div class="title">JMarkText Editor Version 1.0.0</div>
+    </el-footer>
+    </el-container>
   </div>
   <About ref="aboutDialog" />
   <Help ref="helpDialog" />
