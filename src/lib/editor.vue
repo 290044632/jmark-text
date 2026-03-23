@@ -20,7 +20,7 @@ import gfm from "@bytemd/plugin-gfm";
 import highlight from "@bytemd/plugin-highlight-ssr";
 import breaks from "@bytemd/plugin-breaks";
 import gemoji from "@bytemd/plugin-gemoji";
-import mermaid from "@bytemd/plugin-mermaid";
+import mermaid from "@16uke.com/plugin-mermaid";
 import math from "@bytemd/plugin-math-ssr";
 import { Editor } from "@bytemd/vue-next";
 import "bytemd/dist/index.css";
