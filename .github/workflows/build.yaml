@@ -60,4 +60,13 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: packages__VERSION__      
+          name: packages__VERSION__
+          path:
+            - *.dmg
+            - *.rpm
+            - *.deb
+            - *.tar.gz
+            - *.AppImage
+            - *.msi
+            - *.exe
+            - *.zip
