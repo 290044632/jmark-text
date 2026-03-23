@@ -26,3 +26,4 @@ dist-ssr
 .yarn
 .yalc
 *.lock
+*-lock.json
